@@ -1,0 +1,77 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "name": "Alex",
+      "last_name": "Dupon",
+      "email": "alex@gmail.com",
+      "materiel": "Macbook",
+      "validated": true
+    },
+    {
+      "id": 4,
+      "name": "Patric",
+      "last_name": "Meyo",
+      "email": "patric@gmail.com",
+      "materiel": "IPad",
+      "validated": true
+    },
+    {
+      "id": 8265,
+      "name": "Loran",
+      "last_name": "Gredev",
+      "email": "loran@gmail.com",
+      "materiel": "Samsung",
+      "validated": true
+    },
+    {
+      "id": 6001,
+      "name": "Alice",
+      "last_name": "Coel",
+      "email": "alice@gmail.com",
+      "materiel": "Macbook",
+      "validated": false
+    },
+    {
+      "id": 9515,
+      "name": "Antoine",
+      "last_name": "Gallou",
+      "email": "antoine@gmail.com",
+      "materiel": "IPad",
+      "validated": true
+    },
+    {
+      "id": 4706,
+      "name": "Natali",
+      "last_name": "Grec",
+      "email": "natali@gmail.com",
+      "materiel": "Samsung",
+      "validated": true
+    },
+    {
+      "id": 3003,
+      "name": "Sam",
+      "last_name": "Natal",
+      "email": "sam@gmail.com",
+      "materiel": "IPad",
+      "validated": false
+    },
+    {
+      "id": 8468,
+      "name": "Ram",
+      "last_name": "klnknk",
+      "email": "ram@gmail.com",
+      "materiel": "Macbook",
+      "validated": true
+    }
+  ],
+  "profil": [
+    {
+      "name": "admin",
+      "last_name": "profile",
+      "email": "admin@example.com",
+      "password": "admin",
+      "id": 1
+    }
+  ]
+}

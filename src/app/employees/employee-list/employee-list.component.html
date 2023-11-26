@@ -1,0 +1,74 @@
+<div class="search-container">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search" />
+    <label>
+      <input type="radio" name="searchBy" [(ngModel)]="searchBy" value="name" />
+      Search by Name
+    </label>
+    <label>
+      <input type="radio" name="searchBy" [(ngModel)]="searchBy" value="id" />
+      Search by ID
+    </label>
+    <label >
+      <input type="radio" name="searchBy" [(ngModel)]="searchBy" value="materiel" />
+      Search by Material
+    </label>
+  </div>
+  
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>MATERIEL</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of filteredEmployees; let i = index">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.last_name }}</td>
+          <td>{{ employee.email }}</td>
+          <td *ngIf ="employee.validated; else emptyCellular" >{{ employee.materiel }}</td>
+          <ng-template #emptyCellular>
+            <td></td>
+          </ng-template>
+          <td>
+            <button (click)="deleteEmployee(employee)">Delete</button>
+            <button (click)="openUpdateForm(employee)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="showUpdateForm" class="update-form">
+    <h3>Update Employee</h3>
+    <form [formGroup]="updateEmployeeForm" (ngSubmit)="onSubmitUpdate()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" />
+      </label>
+      <label>
+        Last Name:
+        <input type="text" formControlName="last_name" />
+      </label>
+      <label>
+        Email:
+        <input type="email" formControlName="email" />
+      </label>
+      <label>
+        Materiel:
+        <input type="text" formControlName="materiel" />
+      </label>
+      <label>
+        Validated:
+        <input type="checkbox" formControlName="validated" />
+      </label>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  
